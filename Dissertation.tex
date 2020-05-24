@@ -1,0 +1,31 @@
+\documentclass[12pt]{report}
+\usepackage{Thesis}
+\input{Packages}
+\geometry{letterpaper, margin=1in}
+\linespread{1.6}
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
+\urlstyle{same}
+\input{Commands}
+\hbadness=50000
+\vbadness=50000
+\hfuzz=150pt
+\pdfstringdefDisableCommands{
+	\def\hbox{}
+	\def\hfill{}
+	\def\noindent{}
+	\def\hskip{}
+}
+\begin{document}
+	\input{FrontPages}
+  	\begin{thesis}
+   		\input{Chapter1}
+   		\input{Chapter2}
+   		\StartAppendix
+   		\input{Appendix}
+   		\nocite{*}
+   		\bibliographystyle{acm}
+   		\raggedright
+   		\bibliography{Bibliography}
+	\end{thesis}
+\end{document}
